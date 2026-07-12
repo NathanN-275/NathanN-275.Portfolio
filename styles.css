@@ -822,6 +822,52 @@ footer h2 {
   font-size: 21px;
 }
 
+.headshot-panel {
+  position: relative;
+  max-width: 420px;
+  margin: 42px 0 0;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(rgba(255, 90, 31, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 90, 31, 0.08) 1px, transparent 1px),
+    #080a0b;
+  background-size: 38px 38px;
+  overflow: hidden;
+}
+
+.headshot-panel::before,
+.headshot-panel::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.headshot-panel::before {
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(8, 10, 11, 0.08), rgba(8, 10, 11, 0.5)),
+    linear-gradient(90deg, rgba(8, 10, 11, 0.18), transparent 34%, rgba(255, 90, 31, 0.12));
+  mix-blend-mode: multiply;
+}
+
+.headshot-panel::after {
+  top: 18px;
+  right: 18px;
+  width: 9px;
+  height: 9px;
+  background: var(--orange);
+}
+
+.headshot-panel img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  filter: grayscale(0.18) contrast(1.08) brightness(0.82);
+}
+
 .capability-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
