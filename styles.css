@@ -827,7 +827,7 @@ footer h2 {
   width: min(240px, 52%);
   max-width: 240px;
   aspect-ratio: 4 / 5;
-  margin: 0 auto 34px;
+  margin: 0 0 34px auto;
   border: 1px solid var(--line);
   background:
     linear-gradient(rgba(68, 75, 79, 0.32) 1px, transparent 1px),
