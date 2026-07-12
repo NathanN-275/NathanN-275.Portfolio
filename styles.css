@@ -298,14 +298,83 @@ a:focus-visible {
   transform: translateY(-2px);
 }
 
-.button-primary span,
-.text-link span {
+.arrow-icon {
+  position: relative;
   display: inline-block;
+  flex: 0 0 auto;
+  width: 0.9em;
+  height: 0.9em;
+  color: var(--orange);
+}
+
+.arrow-icon::before,
+.arrow-icon::after {
+  position: absolute;
+  content: "";
+}
+
+.arrow-icon::before {
+  height: 2px;
+  background: currentColor;
+}
+
+.arrow-icon::after {
+  width: 0.38em;
+  height: 0.38em;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+}
+
+.arrow-right::before {
+  top: 50%;
+  left: 0;
+  width: 0.88em;
+  transform: translateY(-50%);
+}
+
+.arrow-right::after {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.arrow-external::before {
+  top: 50%;
+  left: 0.05em;
+  width: 0.82em;
+  transform: translateY(-50%) rotate(-45deg);
+  transform-origin: center;
+}
+
+.arrow-external::after {
+  top: 0.06em;
+  right: 0.04em;
+}
+
+.arrow-up::before {
+  top: 0.08em;
+  left: 50%;
+  width: 0.78em;
+  transform: translateX(-50%) rotate(-90deg);
+}
+
+.arrow-up::after {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+.button-primary .arrow-icon {
+  color: #101112;
+}
+
+.button-primary .arrow-icon,
+.text-link .arrow-icon {
   transition: transform 180ms ease;
 }
 
-.button-primary:hover span,
-.text-link:hover span {
+.button-primary:hover .arrow-icon,
+.text-link:hover .arrow-icon {
   transform: translateX(4px);
 }
 
@@ -316,10 +385,6 @@ a:focus-visible {
   color: var(--muted);
   font-size: 16px;
   padding-bottom: 6px;
-}
-
-.text-link span {
-  color: var(--orange);
 }
 
 .text-link:hover,
@@ -718,7 +783,7 @@ footer h2 {
   text-transform: uppercase;
 }
 
-.project-link span,
+.project-link .arrow-icon,
 .project-link:hover,
 .project-link:focus-visible {
   color: var(--orange);
@@ -801,9 +866,8 @@ footer h2 {
   padding-bottom: 6px;
 }
 
-.profile-links a span {
+.profile-links a .arrow-icon {
   margin-left: 9px;
-  color: var(--orange);
 }
 
 .profile-links a:hover,
@@ -929,7 +993,7 @@ footer h2 {
   padding: 24px 0;
 }
 
-.contact-details span {
+.contact-details > div > span {
   color: var(--orange);
   font-family: "Courier New", monospace;
   font-size: 10px;
@@ -943,16 +1007,17 @@ footer h2 {
   font-size: 15px;
 }
 
-.contact-details b {
-  margin-left: 8px;
-  color: var(--orange);
-  font-weight: 400;
-}
-
 .contact-details nav {
   display: flex;
   flex-wrap: wrap;
   gap: 18px;
+}
+
+.contact-details a,
+.contact-details nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42em;
 }
 
 .contact-details a:hover,
@@ -989,10 +1054,15 @@ footer .crosshair {
 
 .footer-meta a {
   display: inline-flex;
+  align-items: center;
   gap: 22px;
   margin-top: 20px;
   border-bottom: 1px solid #101112;
   padding-bottom: 5px;
+}
+
+.footer-meta .arrow-icon {
+  color: #101112;
 }
 
 @keyframes rise-in {
