@@ -22,5 +22,6 @@ for (const [source, target] of files) {
 await copyFile(join(root, ".nojekyll"), join(dist, ".nojekyll"));
 await cp(join(root, "images"), join(dist, "images"), { recursive: true });
 await cp(join(root, "resume"), join(dist, "resume"), { recursive: true });
+await cp(join(root, "certificates"), join(dist, "certificates"), { recursive: true });
 
 console.log("Built static portfolio into dist/");
