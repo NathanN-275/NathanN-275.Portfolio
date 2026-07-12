@@ -873,15 +873,6 @@ footer h2 {
   line-height: 1.45;
 }
 
-.certifications a {
-  color: var(--muted);
-}
-
-.certifications a:hover,
-.certifications a:focus-visible {
-  color: var(--orange);
-}
-
 .timeline small {
   display: block;
   margin-top: 9px;
