@@ -824,14 +824,14 @@ footer h2 {
 
 .contact-card {
   position: relative;
-  width: min(260px, 58%);
-  max-width: 260px;
+  width: min(240px, 52%);
+  max-width: 240px;
   aspect-ratio: 4 / 5;
   margin: 0 auto 34px;
   border: 1px solid var(--line);
   background:
-    linear-gradient(rgba(255, 90, 31, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 90, 31, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(68, 75, 79, 0.32) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(68, 75, 79, 0.24) 1px, transparent 1px),
     #080a0b;
   background-size: 38px 38px;
   overflow: hidden;
@@ -852,8 +852,8 @@ footer h2 {
 .contact-card::before {
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(8, 10, 11, 0.02), rgba(8, 10, 11, 0.3)),
-    linear-gradient(90deg, rgba(8, 10, 11, 0.12), transparent 46%, rgba(255, 90, 31, 0.06));
+    linear-gradient(180deg, rgba(8, 10, 11, 0), rgba(8, 10, 11, 0.18)),
+    linear-gradient(90deg, rgba(8, 10, 11, 0.08), transparent 50%, rgba(8, 10, 11, 0.1));
 }
 
 .contact-card img {
@@ -861,7 +861,7 @@ footer h2 {
   height: 100%;
   object-fit: cover;
   object-position: 50% 26%;
-  filter: grayscale(0.32) contrast(1.06) brightness(0.88);
+  filter: grayscale(0.12) contrast(1.03) brightness(0.96);
 }
 
 .capability-list {
