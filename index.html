@@ -5,322 +5,443 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Nathan Ngau portfolio: software projects, machine-learning experiments, systems work, and contact links."
+      content="Nathan Ngau's portfolio of computer vision, systems, data, mobile, and software projects."
     >
-    <title>Nathan Ngau | Software Portfolio</title>
+    <title>Nathan Ngau | Software Engineer</title>
+    <link rel="shortcut icon" href="favicon.svg">
+    <link rel="icon" href="favicon.svg">
+    <link rel="preload" as="image" href="images/nathan-cv-hero.png">
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="Nathan Ngau home">
-        <span class="brand-mark">NN</span>
-        <span>Nathan Ngau</span>
-      </a>
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a class="nav-link is-active" href="#work" data-section="work" aria-current="page">Work</a>
-        <a class="nav-link" href="#about" data-section="about">About</a>
-        <a class="nav-link" href="#contact" data-section="contact">Contact</a>
-        <a class="nav-link nav-link-external" href="https://github.com/NathanN-275" target="_blank" rel="noreferrer">GitHub</a>
-      </nav>
-    </header>
-
     <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow">Software developer / data systems builder</p>
-          <h1 id="hero-title">Nathan Ngau builds technical products from rough data and real constraints.</h1>
-          <p class="hero-lede">
-            A portfolio of mobile tooling, machine-learning experiments, web applications, and operating-systems projects
-            with an emphasis on practical feedback loops and readable engineering.
-          </p>
-          <div class="hero-actions" aria-label="Primary actions">
-            <a class="button button-primary" href="#work">View projects</a>
-            <a class="button button-secondary" href="#contact">Get in touch</a>
-          </div>
+      <header class="site-header">
+        <a class="wordmark" href="#top" aria-label="Nathan Ngau, home">
+          <span>NATHAN NGAU</span>
+        </a>
+        <nav aria-label="Primary navigation">
+          <a class="active" href="#work" data-section="work" aria-current="page">Work</a>
+          <a href="#about" data-section="about">About</a>
+          <a href="#contact" data-section="contact">Contact</a>
+          <a href="https://github.com/NathanN-275" target="_blank" rel="noreferrer">GitHub</a>
+        </nav>
+      </header>
+
+      <section class="hero technical-grid" aria-labelledby="hero-title">
+        <div class="axis axis-y" aria-hidden="true">
+          <span>400</span>
+          <span>300</span>
+          <span>200</span>
+          <span>100</span>
+          <span>00</span>
         </div>
-        <aside class="signal-panel" aria-label="Technical profile">
-          <div class="signal-header">
-            <span class="pulse"></span>
-            <span>Active build surface</span>
-          </div>
-          <dl class="signal-list">
-            <div>
-              <dt>Current focus</dt>
-              <dd>Peso lifting analysis</dd>
-            </div>
-            <div>
-              <dt>Core stack</dt>
-              <dd>Python, TypeScript, React Native, C</dd>
-            </div>
-            <div>
-              <dt>Project mode</dt>
-              <dd>Prototype, measure, refine</dd>
-            </div>
-          </dl>
-        </aside>
-      </section>
-
-      <section id="work" class="section" data-observe-section aria-labelledby="work-title">
-        <div class="section-heading">
-          <p class="eyebrow">Selected work</p>
-          <h2 id="work-title">Projects</h2>
-          <p>
-            Public repositories spanning mobile analysis, sports prediction, real-estate modeling,
-            finance research, full-stack web, and systems programming.
-          </p>
-        </div>
-
-        <div class="project-grid">
-          <article class="project-card featured">
-            <div class="card-topline">
-              <span class="project-type">Mobile analysis app</span>
-              <span class="project-status">Active</span>
-            </div>
-            <h3>Peso</h3>
-            <p>
-              Mobile-first lifting analysis that turns workout video into visual feedback, rep summaries,
-              movement overlays, and technique cues. The current version focuses on side-view squat analysis
-              with pose tracking, bar-path overlays, and pin-assisted review.
-            </p>
-            <ul class="tag-list" aria-label="Peso technologies">
-              <li>Python</li>
-              <li>React Native</li>
-              <li>Computer vision</li>
-              <li>Supabase</li>
-            </ul>
-            <a class="text-link" href="https://github.com/NathanN-275/Peso" target="_blank" rel="noreferrer">Open repository</a>
-          </article>
-
-          <article class="project-card">
-            <div class="card-topline">
-              <span class="project-type">Full-stack web</span>
-            </div>
-            <h3>Electronic Billboard Management System</h3>
-            <p>
-              Next.js application for digital ad management in physical billboard spaces. Billboard owners can
-              register inventory and rates, while advertisers select slots and upload scheduled creative.
-            </p>
-            <ul class="tag-list" aria-label="EBMS technologies">
-              <li>Next.js</li>
-              <li>Web app</li>
-              <li>Scheduling</li>
-            </ul>
-            <div class="link-row">
-              <a class="text-link" href="https://github.com/NathanN-275/03-EBMS" target="_blank" rel="noreferrer">Repository</a>
-              <a class="text-link" href="https://03-ebms.vercel.app" target="_blank" rel="noreferrer">Live app</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="card-topline">
-              <span class="project-type">Machine learning</span>
-            </div>
-            <h3>Philadelphia Housing Price Predictor</h3>
-            <p>
-              XGBoost regression project exploring how location and assessed-value features relate to
-              Philadelphia housing sale prices, with an emphasis on diagnostics and model limitations.
-            </p>
-            <ul class="tag-list" aria-label="Housing technologies">
-              <li>Jupyter</li>
-              <li>XGBoost</li>
-              <li>Feature analysis</li>
-            </ul>
-            <a class="text-link" href="https://github.com/NathanN-275/Housing_Price_predictor" target="_blank" rel="noreferrer">Open repository</a>
-          </article>
-
-          <article class="project-card">
-            <div class="card-topline">
-              <span class="project-type">Sports analytics</span>
-            </div>
-            <h3>NFL Stats Predictions</h3>
-            <p>
-              Ongoing machine-learning exploration for predicting NFL player production from historical weekly
-              statistics, usage trends, rolling averages, and defensive matchup context.
-            </p>
-            <ul class="tag-list" aria-label="NFL technologies">
-              <li>Python</li>
-              <li>Ridge regression</li>
-              <li>nflverse</li>
-            </ul>
-            <a class="text-link" href="https://github.com/NathanN-275/NFL_Stats_Predictions" target="_blank" rel="noreferrer">Open repository</a>
-          </article>
-
-          <article class="project-card">
-            <div class="card-topline">
-              <span class="project-type">Data analysis</span>
-            </div>
-            <h3>Workout Strength Trend Analysis</h3>
-            <p>
-              Notebook-driven analysis of Hevy workout logs that cleans training history, compares volume and
-              intensity patterns, estimates one-rep max trends, and forecasts future strength progress.
-            </p>
-            <ul class="tag-list" aria-label="Lifting technologies">
-              <li>Jupyter</li>
-              <li>pandas</li>
-              <li>Forecasting</li>
-            </ul>
-            <a class="text-link" href="https://github.com/NathanN-275/Lifting-stats" target="_blank" rel="noreferrer">Open repository</a>
-          </article>
-
-          <article class="project-card">
-            <div class="card-topline">
-              <span class="project-type">Finance research</span>
-            </div>
-            <h3>Trading Practice</h3>
-            <p>
-              Python research notebooks and notes built while following the Sharp Research trading course,
-              focused on financial data collection, indicators, strategy logic, and backtesting workflows.
-            </p>
-            <ul class="tag-list" aria-label="Trading technologies">
-              <li>Python</li>
-              <li>pandas</li>
-              <li>Backtesting</li>
-            </ul>
-            <a class="text-link" href="https://github.com/NathanN-275/Trading_Practice" target="_blank" rel="noreferrer">Open repository</a>
-          </article>
-
-          <article class="project-card">
-            <div class="card-topline">
-              <span class="project-type">Operating systems</span>
-            </div>
-            <h3>FAT-Style Virtual File System</h3>
-            <p>
-              C implementation of a simplified file system stored inside a virtual disk image, including
-              persistent metadata, FAT block allocation, root directory entries, descriptors, and file operations.
-            </p>
-            <ul class="tag-list" aria-label="File system technologies">
-              <li>C</li>
-              <li>FAT</li>
-              <li>Virtual disk</li>
-            </ul>
-            <a class="text-link" href="https://github.com/NathanN-275/OS-File-System" target="_blank" rel="noreferrer">Open repository</a>
-          </article>
-
-          <article class="project-card">
-            <div class="card-topline">
-              <span class="project-type">Concurrent systems</span>
-            </div>
-            <h3>Restaurant System Simulations</h3>
-            <p>
-              Two C simulations of restaurant workflows: one using UNIX processes and System V message queues,
-              and another using POSIX threads, mutexes, condition variables, semaphores, and shared queues.
-            </p>
-            <ul class="tag-list" aria-label="Restaurant technologies">
-              <li>C</li>
-              <li>IPC</li>
-              <li>Threads</li>
-            </ul>
-            <div class="link-row">
-              <a class="text-link" href="https://github.com/NathanN-275/OS-Restaurant-System" target="_blank" rel="noreferrer">Processes</a>
-              <a class="text-link" href="https://github.com/NathanN-275/OS-Restaurant-System-With-Threads" target="_blank" rel="noreferrer">Threads</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="card-topline">
-              <span class="project-type">Mobile UI</span>
-            </div>
-            <h3>Kliftra</h3>
-            <p>
-              React Native mobile UI project for a modern authentication and onboarding flow for a climbing
-              planning app concept, with organized screens, navigation structure, and TypeScript components.
-            </p>
-            <ul class="tag-list" aria-label="Kliftra technologies">
-              <li>React Native</li>
-              <li>TypeScript</li>
-              <li>Expo</li>
-            </ul>
-            <a class="text-link" href="https://github.com/NathanN-275/Kliftra" target="_blank" rel="noreferrer">Open repository</a>
-          </article>
-        </div>
-      </section>
-
-      <section id="about" class="section about-section" data-observe-section aria-labelledby="about-title">
-        <div class="section-heading">
-          <p class="eyebrow">About</p>
-          <h2 id="about-title">Technical range with practical intent</h2>
-          <p>
-            The About section includes the experience, education, certifications, and document links area
-            so the navigation treats the full professional profile as one continuous section.
-          </p>
-        </div>
-
-        <div class="about-layout">
-          <div class="about-copy">
-            <p>
-              Nathan works across app interfaces, data pipelines, machine-learning notebooks, and lower-level
-              systems projects. The through line is building usable feedback from noisy inputs: lifting videos,
-              sports stats, housing data, workout logs, file-system blocks, and concurrent process events.
-            </p>
-            <p>
-              Current public work includes Peso, a mobile-first lifting analysis app, alongside projects in
-              predictive modeling, finance research, React Native UI, and C-based operating-systems coursework.
-            </p>
-          </div>
-
-          <div class="profile-stack">
-            <article class="timeline-panel">
-              <h3>Experience</h3>
-              <div class="timeline-item">
-                <p class="timeline-kicker">Product engineering</p>
-                <h4>Peso</h4>
-                <p>
-                  Building a mobile lifting-analysis workflow that supports upload/recording, backend video
-                  processing, pose and bar tracking, analyzed playback, and coaching feedback.
-                </p>
-              </div>
-              <div class="timeline-item">
-                <p class="timeline-kicker">Academic and independent projects</p>
-                <h4>Software systems, analytics, and web applications</h4>
-                <p>
-                  Developed public projects in C, Python, TypeScript, Java, Jupyter, Next.js, and React Native.
-                </p>
-              </div>
-            </article>
-
-            <article class="timeline-panel">
-              <h3>Education</h3>
-              <div class="timeline-item">
-                <p class="timeline-kicker">Computer science coursework and applied projects</p>
-                <h4>Systems, data, and application development</h4>
-                <p>
-                  Public coursework-style repositories include file systems, process/thread simulations,
-                  statistics modeling, and application prototypes.
-                </p>
-              </div>
-            </article>
-
-            <article class="timeline-panel">
-              <h3>Certifications and documents</h3>
-              <div class="document-list">
-                <a href="https://github.com/NathanN-275" target="_blank" rel="noreferrer">GitHub profile</a>
-                <a href="https://github.com/NathanN-275/NathanN-275.Portfolio" target="_blank" rel="noreferrer">Portfolio repository</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section contact-section" data-observe-section aria-labelledby="contact-title">
-        <div class="contact-card">
-          <p class="eyebrow">Contact</p>
-          <h2 id="contact-title">Open to software, data, and product engineering conversations.</h2>
-          <p>
-            The fastest public route is GitHub. Repository links are preserved throughout the project cards,
-            and this portfolio source is configured for GitHub Pages deployment.
+        <div class="hero-copy reveal-one">
+          <p class="eyebrow"><span class="crosshair">+</span> Temple University computer science</p>
+          <h1 id="hero-title">Software built to understand motion.</h1>
+          <div class="hero-rule" aria-hidden="true"></div>
+          <p class="hero-intro">
+            Computer vision, systems programming, and data pipelines, engineered with rigor and built to ship.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="https://github.com/NathanN-275" target="_blank" rel="noreferrer">GitHub profile</a>
-            <a class="button button-secondary" href="https://github.com/NathanN-275/NathanN-275.Portfolio" target="_blank" rel="noreferrer">Portfolio repo</a>
+            <a class="button button-primary" href="#work">Explore selected work <span aria-hidden="true">-&gt;</span></a>
+            <a class="text-link" href="resume/Nathan-Ngau-Resume.pdf" target="_blank" rel="noreferrer">
+              View resume <span aria-hidden="true">-&gt;</span>
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual reveal-two" aria-hidden="true">
+          <img src="images/nathan-cv-hero.png" alt="">
+          <div class="instrument-readout readout-top">
+            <span>FPS&nbsp; 18.0</span>
+            <span>POSE&nbsp; HYBRID</span>
+            <span>CONF&nbsp; 0.93</span>
+          </div>
+          <div class="instrument-readout readout-bottom">
+            <span>REPS&nbsp; 05</span>
+            <span>DEPTH&nbsp; PASS</span>
+            <span>DV&nbsp;&nbsp; 0.42 M/S</span>
+          </div>
+          <span class="hero-plus plus-one">+</span>
+          <span class="hero-plus plus-two">+</span>
+        </div>
+        <div class="axis axis-x" aria-hidden="true"></div>
+      </section>
+
+      <section class="section work-section" id="work" data-observe-section aria-labelledby="work-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span class="crosshair">+</span> Selected work</p>
+            <h2 id="work-title">From low-level systems to shipped products.</h2>
+          </div>
+          <p>
+            Nathan builds across the stack: mobile interfaces, authenticated APIs, computer vision,
+            concurrent systems, and applied machine learning.
+          </p>
+        </div>
+
+        <div class="filters" aria-label="Filter projects">
+          <button class="selected" type="button" data-filter="all">All<span>08</span></button>
+          <button type="button" data-filter="software">Software<span>02</span></button>
+          <button type="button" data-filter="systems">Systems<span>03</span></button>
+          <button type="button" data-filter="data">Data + ML<span>03</span></button>
+        </div>
+
+        <div class="project-grid" aria-live="polite">
+          <article class="project-card" id="peso" data-category="software">
+            <div class="project-visual visual-peso" aria-hidden="true">
+              <span class="visual-index">01</span>
+              <span class="visual-cross cross-one"></span>
+              <span class="visual-cross cross-two"></span>
+              <span class="visual-scan"></span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta"><span>Software</span><span>Active development</span></div>
+              <h3>Peso</h3>
+              <p class="organization">Computer vision lifting analysis app</p>
+              <p class="project-summary">
+                A mobile-first app that turns a squat video into tracked playback, rep summaries,
+                technique cues, and 10+ movement metrics using a full-stack analysis pipeline.
+              </p>
+              <p class="impact">64 passing backend tests · video sampled at up to 18 FPS</p>
+              <ul class="tool-list" aria-label="Peso tools">
+                <li>React Native</li>
+                <li>TypeScript</li>
+                <li>FastAPI</li>
+                <li>OpenCV</li>
+                <li>MediaPipe</li>
+                <li>Supabase</li>
+              </ul>
+              <a class="project-link" href="https://github.com/NathanN-275/Peso" target="_blank" rel="noreferrer">
+                View on GitHub <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card" id="restaurant-simulation" data-category="systems">
+            <div class="project-visual visual-threads" aria-hidden="true">
+              <span class="visual-index">02</span>
+              <span class="visual-cross cross-one"></span>
+              <span class="visual-cross cross-two"></span>
+              <span class="visual-scan"></span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta"><span>Systems</span><span>Temple University</span></div>
+              <h3>Restaurant Management Simulation</h3>
+              <p class="organization">Interprocess communication in C</p>
+              <p class="project-summary">
+                A multi-process restaurant simulation that coordinates customer orders, kitchen work,
+                and completed meals through structured message passing.
+              </p>
+              <p class="impact">Independent processes · synchronized order lifecycle</p>
+              <ul class="tool-list" aria-label="Restaurant Management Simulation tools">
+                <li>C</li>
+                <li>System V message queues</li>
+                <li>IPC</li>
+                <li>Process coordination</li>
+              </ul>
+              <a class="project-link" href="https://github.com/NathanN-275/OS-Restaurant-System" target="_blank" rel="noreferrer">
+                View on GitHub <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card" id="restaurant-simulation-threads" data-category="systems">
+            <div class="project-visual visual-threads" aria-hidden="true">
+              <span class="visual-index">03</span>
+              <span class="visual-cross cross-one"></span>
+              <span class="visual-cross cross-two"></span>
+              <span class="visual-scan"></span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta"><span>Systems</span><span>Temple University</span></div>
+              <h3>Restaurant System With Threads</h3>
+              <p class="organization">Multithreaded C project</p>
+              <p class="project-summary">
+                A concurrent restaurant simulation coordinating customers, waiters, and kitchen work
+                with producer-consumer queues and carefully managed shared resources.
+              </p>
+              <p class="impact">Thread-safe queues · coordinated concurrent tasks</p>
+              <ul class="tool-list" aria-label="Restaurant System With Threads tools">
+                <li>C</li>
+                <li>POSIX threads</li>
+                <li>Mutexes</li>
+                <li>Condition variables</li>
+                <li>Semaphores</li>
+              </ul>
+              <a class="project-link" href="https://github.com/NathanN-275/OS-Restaurant-System-With-Threads" target="_blank" rel="noreferrer">
+                View on GitHub <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card" id="lifting-stats" data-category="data">
+            <div class="project-visual visual-analytics" aria-hidden="true">
+              <span class="visual-index">04</span>
+              <span class="visual-cross cross-one"></span>
+              <span class="visual-cross cross-two"></span>
+              <span class="visual-scan"></span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta"><span>Data + ML</span><span>Python data project</span></div>
+              <h3>Lifting Stats</h3>
+              <p class="organization">Strength analytics + forecasting</p>
+              <p class="project-summary">
+                A reproducible pipeline that cleans years of workout logs, exposes volume and
+                intensity trends, and forecasts future strength using regression and rolling features.
+              </p>
+              <p class="impact">3+ years · 10,000+ data points · 85% predictive accuracy</p>
+              <ul class="tool-list" aria-label="Lifting Stats tools">
+                <li>Python</li>
+                <li>Pandas</li>
+                <li>scikit-learn</li>
+                <li>Regression</li>
+                <li>Visualization</li>
+              </ul>
+              <a class="project-link" href="https://github.com/NathanN-275/Lifting-stats" target="_blank" rel="noreferrer">
+                View on GitHub <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card" id="virtual-file-system" data-category="systems">
+            <div class="project-visual visual-filesystem" aria-hidden="true">
+              <span class="visual-index">05</span>
+              <span class="visual-cross cross-one"></span>
+              <span class="visual-cross cross-two"></span>
+              <span class="visual-scan"></span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta"><span>Systems</span><span>Temple University</span></div>
+              <h3>Virtual File System</h3>
+              <p class="organization">FAT-style storage implementation</p>
+              <p class="project-summary">
+                A persistent virtual file system with allocation tables, block management, metadata,
+                and core read, write, seek, and delete operations.
+              </p>
+              <p class="impact">64 files · 32 concurrent descriptors · 15% disk-usage improvement</p>
+              <ul class="tool-list" aria-label="Virtual File System tools">
+                <li>C</li>
+                <li>Linux</li>
+                <li>Virtual disk I/O</li>
+                <li>File allocation</li>
+                <li>Persistence</li>
+              </ul>
+              <a class="project-link" href="https://github.com/NathanN-275/OS-File-System" target="_blank" rel="noreferrer">
+                View on GitHub <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card" id="nfl-predictions" data-category="data">
+            <div class="project-visual visual-football" aria-hidden="true">
+              <span class="visual-index">06</span>
+              <span class="visual-cross cross-one"></span>
+              <span class="visual-cross cross-two"></span>
+              <span class="visual-scan"></span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta"><span>Data + ML</span><span>Ongoing ML exploration</span></div>
+              <h3>NFL Stats Predictions</h3>
+              <p class="organization">Weekly player forecasting</p>
+              <p class="project-summary">
+                Machine-learning models that estimate weekly player production from recent usage,
+                rolling performance, and opponent-specific defensive context.
+              </p>
+              <p class="impact">Week-by-week evaluation with Ridge regression baselines</p>
+              <ul class="tool-list" aria-label="NFL Stats Predictions tools">
+                <li>Python</li>
+                <li>nflverse</li>
+                <li>Feature engineering</li>
+                <li>Ridge regression</li>
+              </ul>
+              <a class="project-link" href="https://github.com/NathanN-275/NFL_Stats_Predictions" target="_blank" rel="noreferrer">
+                View on GitHub <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card" id="housing-predictor" data-category="data">
+            <div class="project-visual visual-housing" aria-hidden="true">
+              <span class="visual-index">07</span>
+              <span class="visual-cross cross-one"></span>
+              <span class="visual-cross cross-two"></span>
+              <span class="visual-scan"></span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta"><span>Data + ML</span><span>Machine learning study</span></div>
+              <h3>Philadelphia Housing Predictor</h3>
+              <p class="organization">Real-estate model diagnostics</p>
+              <p class="project-summary">
+                An XGBoost regression study of Philadelphia sale prices that pairs feature analysis
+                with an honest investigation of why a high R² can still hide large prediction errors.
+              </p>
+              <p class="impact">80/20 train-test split · model limitations documented</p>
+              <ul class="tool-list" aria-label="Philadelphia Housing Predictor tools">
+                <li>Python</li>
+                <li>XGBoost</li>
+                <li>Data cleaning</li>
+                <li>Model evaluation</li>
+              </ul>
+              <a class="project-link" href="https://github.com/NathanN-275/Housing_Price_predictor" target="_blank" rel="noreferrer">
+                View on GitHub <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card" id="kliftra" data-category="software">
+            <div class="project-visual visual-mobile" aria-hidden="true">
+              <span class="visual-index">08</span>
+              <span class="visual-cross cross-one"></span>
+              <span class="visual-cross cross-two"></span>
+              <span class="visual-scan"></span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta"><span>Software</span><span>React Native UI</span></div>
+              <h3>Kliftra</h3>
+              <p class="organization">Mobile climbing product concept</p>
+              <p class="project-summary">
+                A mobile interface concept for helping rock climbers plan beta, with a clean authentication
+                flow and scalable component and navigation structure.
+              </p>
+              <p class="impact">Designed for backend auth and product expansion</p>
+              <ul class="tool-list" aria-label="Kliftra tools">
+                <li>React Native</li>
+                <li>TypeScript</li>
+                <li>Expo</li>
+                <li>Mobile UI</li>
+              </ul>
+              <a class="project-link" href="https://github.com/NathanN-275/Kliftra" target="_blank" rel="noreferrer">
+                View on GitHub <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section profile-section" id="about" data-observe-section aria-labelledby="about-title">
+        <div class="about-panel">
+          <p class="eyebrow"><span class="crosshair">+</span> About</p>
+          <h2 id="about-title">I build software that has to work in the real world.</h2>
+          <p class="about-lead">
+            I'm a computer science student at Temple University with hands-on experience in computer vision,
+            full-stack product development, concurrent systems, file systems, and data pipelines.
+          </p>
+          <p>
+            I like problems that cross boundaries: a mobile app backed by video-processing infrastructure,
+            a forecasting model grounded in years of training data, or a C system where synchronization and
+            storage have to be correct. Across each, I care about understanding the whole system and making
+            the details hold up.
+          </p>
+          <div class="capability-list">
+            <span><i>01</i>Python</span>
+            <span><i>02</i>TypeScript</span>
+            <span><i>03</i>C + Java</span>
+            <span><i>04</i>React Native</span>
+            <span><i>05</i>Computer vision</span>
+            <span><i>06</i>Data + ML</span>
+            <span><i>07</i>Concurrent systems</span>
+            <span><i>08</i>Docker + Kubernetes</span>
+          </div>
+          <div class="profile-links">
+            <a href="mailto:nathanngau27@gmail.com">Email <span>↗</span></a>
+            <a href="https://github.com/NathanN-275" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+            <a href="https://linkedin.com/in/nathanngau27/" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
+          </div>
+        </div>
+
+        <div class="resume-panel">
+          <div class="resume-title">
+            <div>
+              <h2>Experience</h2>
+            </div>
+            <a class="resume-note" href="resume/Nathan-Ngau-Resume.pdf" target="_blank" rel="noreferrer">Open PDF ↗</a>
+          </div>
+          <div class="timeline">
+            <article>
+              <span>Oct 2025 — Present</span>
+              <div>
+                <h3>Building Manager</h3>
+                <p>Howard Gittis Student Center · Philadelphia, PA</p>
+                <small>Live event operations, A/V troubleshooting, and accurate equipment tracking across 15 rooms.</small>
+              </div>
+            </article>
+            <article>
+              <span>Sep 2022 — Present</span>
+              <div>
+                <h3>Co-owner / Manager</h3>
+                <p>Manor Laundromat LLC · Lancaster, PA</p>
+                <small>Machine repair, payment systems, customer support, and daily operations for a working small business.</small>
+              </div>
+            </article>
+            <article>
+              <span>Jun — Aug 2024</span>
+              <div>
+                <h3>Warehouse + Retail Worker</h3>
+                <p>Soccer Post · Lancaster, PA</p>
+                <small>Customer recommendations, inventory organization, and seasonal retail operations.</small>
+              </div>
+            </article>
+          </div>
+          <div class="education">
+            <span>Education</span>
+            <div>
+              <h3>B.S. Computer Science</h3>
+              <p>Temple University · Philadelphia, PA</p>
+            </div>
+          </div>
+          <div class="certifications">
+            <span>Certifications</span>
+            <div>
+              <p>Six Sigma White Belt · 2026</p>
+              <p>AI Fluency: Framework &amp; Foundations · Anthropic · 2026</p>
+            </div>
           </div>
         </div>
       </section>
-    </main>
 
-    <footer class="site-footer">
-      <span>© <span data-current-year></span> Nathan Ngau</span>
-      <a href="#top">Back to top</a>
-    </footer>
+      <section class="contact-section technical-grid" id="contact" data-observe-section aria-labelledby="contact-title">
+        <div class="contact-copy">
+          <p class="eyebrow"><span class="crosshair">+</span> Contact</p>
+          <h2 id="contact-title">Let's build something useful.</h2>
+          <p>
+            I'm interested in software engineering internships and entry-level roles where I can work across
+            product, systems, data, or computer vision.
+          </p>
+          <a class="button button-primary" href="mailto:nathanngau27@gmail.com">
+            Start a conversation <span aria-hidden="true">-&gt;</span>
+          </a>
+        </div>
+        <div class="contact-details">
+          <div>
+            <span>Email</span>
+            <a href="mailto:nathanngau27@gmail.com">nathanngau27@gmail.com <b>↗</b></a>
+          </div>
+          <div>
+            <span>Location</span>
+            <p>Philadelphia, Pennsylvania</p>
+          </div>
+          <div>
+            <span>Elsewhere</span>
+            <nav aria-label="Contact links">
+              <a href="https://github.com/NathanN-275" target="_blank" rel="noreferrer">GitHub ↗</a>
+              <a href="https://linkedin.com/in/nathanngau27/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+              <a href="resume/Nathan-Ngau-Resume.pdf" target="_blank" rel="noreferrer">Resume ↗</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div>
+          <p class="eyebrow"><span class="crosshair">+</span> Nathan Ngau</p>
+          <h2>Build. Test. Learn. Repeat.</h2>
+        </div>
+        <div class="footer-meta">
+          <p>Computer science · Philadelphia, PA · Open to software roles</p>
+          <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+        </div>
+      </footer>
+    </main>
   </body>
 </html>

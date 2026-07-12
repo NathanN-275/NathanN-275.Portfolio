@@ -1,10 +1,12 @@
 const navLinks = Array.from(document.querySelectorAll("[data-section]"));
 const sections = Array.from(document.querySelectorAll("[data-observe-section]"));
+const filterButtons = Array.from(document.querySelectorAll("[data-filter]"));
+const projectCards = Array.from(document.querySelectorAll("[data-category]"));
 
 const setActiveLink = (sectionId) => {
   navLinks.forEach((link) => {
     const isActive = link.dataset.section === sectionId;
-    link.classList.toggle("is-active", isActive);
+    link.classList.toggle("active", isActive);
     if (isActive) {
       link.setAttribute("aria-current", "page");
     } else {
@@ -13,7 +15,6 @@ const setActiveLink = (sectionId) => {
   });
 };
 
-const sectionRatios = new Map(sections.map((section) => [section.id, 0]));
 const validSectionIds = new Set(sections.map((section) => section.id));
 let hashLockUntil = 0;
 
@@ -33,8 +34,7 @@ const updateActiveFromScroll = () => {
     return;
   }
 
-  const page = document.documentElement;
-  if (window.scrollY + window.innerHeight >= page.scrollHeight - 4) {
+  if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4) {
     setActiveLink(sections[sections.length - 1].id);
     return;
   }
@@ -54,23 +54,10 @@ const updateActiveFromScroll = () => {
   }
 };
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      sectionRatios.set(entry.target.id, entry.intersectionRatio);
-    });
-
-    updateActiveFromScroll();
-    const strongest = Array.from(sectionRatios.entries()).sort((a, b) => b[1] - a[1])[0];
-    if (strongest && strongest[1] > 0) {
-      updateActiveFromScroll();
-    }
-  },
-  {
-    rootMargin: "-18% 0px -48% 0px",
-    threshold: [0, 0.2, 0.35, 0.5, 0.65, 0.8, 1]
-  }
-);
+const observer = new IntersectionObserver(updateActiveFromScroll, {
+  rootMargin: "-18% 0px -40% 0px",
+  threshold: [0, 0.2, 0.45, 0.7, 1]
+});
 
 sections.forEach((section) => observer.observe(section));
 window.addEventListener("scroll", updateActiveFromScroll, { passive: true });
@@ -81,11 +68,17 @@ window.addEventListener("hashchange", () => {
   }
 });
 
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const filter = button.dataset.filter;
+
+    filterButtons.forEach((item) => item.classList.toggle("selected", item === button));
+    projectCards.forEach((card) => {
+      card.hidden = filter !== "all" && card.dataset.category !== filter;
+    });
+  });
+});
+
 if (!updateActiveFromHash()) {
   updateActiveFromScroll();
-}
-
-const year = document.querySelector("[data-current-year]");
-if (year) {
-  year.textContent = new Date().getFullYear();
 }
