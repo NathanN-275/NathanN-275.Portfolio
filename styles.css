@@ -824,8 +824,10 @@ footer h2 {
 
 .contact-card {
   position: relative;
-  max-width: 520px;
-  margin: 0 0 34px;
+  width: min(260px, 58%);
+  max-width: 260px;
+  aspect-ratio: 4 / 5;
+  margin: 0 0 34px auto;
   border: 1px solid var(--line);
   background:
     linear-gradient(rgba(255, 90, 31, 0.1) 1px, transparent 1px),
@@ -833,6 +835,12 @@ footer h2 {
     #080a0b;
   background-size: 38px 38px;
   overflow: hidden;
+}
+
+.contact-card::before,
+.contact-card::after,
+.contact-card img {
+  display: block;
 }
 
 .contact-card::before,
@@ -846,26 +854,23 @@ footer h2 {
 .contact-card::before {
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(8, 10, 11, 0.08), rgba(8, 10, 11, 0.5)),
-    linear-gradient(90deg, rgba(8, 10, 11, 0.18), transparent 34%, rgba(255, 90, 31, 0.12));
-  mix-blend-mode: multiply;
+    linear-gradient(180deg, rgba(8, 10, 11, 0.04), rgba(8, 10, 11, 0.48)),
+    linear-gradient(90deg, rgba(8, 10, 11, 0.22), transparent 42%, rgba(255, 90, 31, 0.12));
 }
 
 .contact-card::after {
-  top: 18px;
-  right: 18px;
-  width: 9px;
-  height: 9px;
-  background: var(--orange);
+  inset: 14px;
+  border-top: 1px solid var(--orange);
+  border-right: 1px solid var(--orange);
+  opacity: 0.9;
 }
 
 .contact-card img {
-  display: block;
   width: 100%;
-  height: clamp(260px, 30vw, 380px);
+  height: 100%;
   object-fit: cover;
   object-position: 50% 26%;
-  filter: grayscale(0.18) contrast(1.08) brightness(0.82);
+  filter: grayscale(0.68) contrast(1.12) brightness(0.74);
 }
 
 .capability-list {
@@ -1292,6 +1297,11 @@ footer .crosshair {
   .education,
   .certifications {
     grid-template-columns: 92px 1fr;
+  }
+
+  .contact-card {
+    width: min(220px, 62vw);
+    margin-left: 0;
   }
 
   footer {
